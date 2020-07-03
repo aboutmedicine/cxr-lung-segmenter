@@ -1,4 +1,6 @@
-# Pytorch CXR Segmentation
+# Pytorch CXR Lung Segmentation
+
+Live version here: https://cxr-lung-segmenter.herokuapp.com/
 
 ## Local Deployment
 
