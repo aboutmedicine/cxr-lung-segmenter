@@ -1,0 +1,55 @@
+html,
+body {
+  height: 100%;
+  font-family: 'Avenir';
+}
+
+.body-box {
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  font-family: 'Avenir';
+}
+
+.form-control {
+  position: relative;
+  padding: 16px;
+  font-size: 16px;
+  font-family: 'Avenir';
+  border-radius: 8px;
+}
+
+.upload {
+  width: 256px;
+  padding: 16px;
+  color: #eee;
+  background: #7b98fd;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Avenir';
+  margin-top: 32px;
+}
+
+.citation {
+  display: block;
+  margin: 30px;
+}
+
+h1 {
+  padding: -.2rem;
+}

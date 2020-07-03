@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/static/style.css">
+  <title>CXR Lung Segmenter (alpha)</title>
+</head>
+
+<body>
+
+  <div class="body-box">
+
+    <form class="form-signin" method=post enctype=multipart/form-data>
+      <img src="/static/JPCLN001.png" alt="" width="256">
+      <h1>Upload CXR</h1>
+      <input type="file" name="file" id="inputfile">
+      <button class="upload" type="submit">Upload</button>
+
+    </form>
+
+  </div>
+
+  <div class="citation">
+
+    <b>Citation (CXRs and masks used for model training):</b>
+    <p>B. van Ginneken, M.B. Stegmann, M. Loog, "Segmentation of anatomical structures in chest radiographs using supervised methods: a comparative study on a public database", Medical Image Analysis, 2006, vol. 10, pp. 19-40.</p>
+    <p>J. Shiraishi, S. Katsuragawa, J. Ikezoe, T. Matsumoto, T. Kobayashi, K. Komatsu, M. Matsui, H. Fujita, Y. Kodera, and K. Doi, "Development of a digital image database for chest radiographs with and without a lung nodule: receiver operating
+      characteristic analysis of radiologists' detection of pulmonary nodules", American Journal of Roentgenology, vol. 174, p. 71-74, 2000.</p>
+
+  </div>
+
+  <script type="text/javascript">
+    let input = document.getElementById('inputfile')
+    input.addEventListener('change', function() {
+      let fileSize = this.files[0].size / 1024 / 1024; // this gives in MB
+      if (fileSize > 1) {
+        input.value = null;
+        alert('Please upload file <1mb')
+        return
+      }
+
+      let input_filename = input.value
+      console.log(input_filename)
+      let ext = input_filename.split('.').pop().toLowerCase();
+      if (ext.indexOf('png') == -1) {
+        input.value = null;
+        alert('Only accepts png files.');
+      }
+    })
+  </script>
+
+</body>
+
+</html>
